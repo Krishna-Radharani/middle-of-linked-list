@@ -1,0 +1,14 @@
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        // solving using hare and tortoise method
+        ListNode*hare=head;
+        ListNode*tortoise=head;
+        while(hare!=NULL && hare->next!=NULL){
+                hare=hare->next->next;
+                tortoise=tortoise->next;
+        }
+        return tortoise;
+        
+    }
+};
